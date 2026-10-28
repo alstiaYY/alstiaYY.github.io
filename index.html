@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>alstiaYYのホームページ！！</title>
+
+  <style>
+    body {
+      font-family: sans-serif, "MS PGothic", "ＭＳ Ｐゴシック";
+      margin: 30px;
+      color: #333;
+    }
+
+    .site-title {
+    font-size: 22px;
+    font-weight: bold;
+    white-space: nowrap;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 10px;
+      border-bottom: 2px solid #ddd;
+      justify-content: flex-end;
+    }
+
+    .tab {
+      padding: 12px 24px;
+      border: none;
+      background: #eee;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 6px 6px 0 0;
+    }
+
+    .tab.active {
+      background: #2563eb;
+      color: white;
+    }
+
+    .tab-content {
+      height: 600px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+    }
+
+    .tab-content[hidden] {
+      display: none;
+    }
+    footer {
+        padding: 15px;
+        text-align: center;
+        background: #2b2b2b;
+        color: #ffffff;
+        font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+ <span class="site-title">alstiaYY *試作</span>
+
+  <div class="tabs">
+
+    <button class="tab active"
+      onclick="showTab('tab1', this)">
+      概要
+    </button>
+
+    <button class="tab"
+      onclick="showTab('tab2', this)">
+      創作物
+    </button>
+
+    <button class="tab"
+      onclick="showTab('tab3', this)">
+      実績
+    </button>
+
+    <button class="tab"
+      onclick="showTab('tab4', this)">
+      お問い合わせ
+    </button>
+  </div>
+
+  <div id="tab1" class="tab-content">
+    <h1>◆ 「あるすてぃあ」について ◆</h1>
+    <p>自由に生きるためだけに作られた場所。
+        <br>たまに創作をする。
+    </p>
+    <h2>メンバー</h2>
+    <h3>紙箱</h3>
+    <p>正式名称「alstia」。alstiaYYを運営している人間。
+        <br>「3匹の水母」の創設者であり、一員でもある。
+        <br>プログラミング、執筆、楽曲制作が趣味。
+        <br>やりたいことだけに人生を捧げる。
+        <br>子供の頃の夢は成金。
+    </p>
+    <h3>ゆゆ(AI)</h3>
+    <p>正式名称「YY」。紙箱によって開発されているgpt型ローカルAI。
+        <br>紙箱曰く「nvidia製gpuの値段が高すぎて、モチベがミクロン単位。」
+        <br>開発速度はカタツムリ。
+        <br>ボイスと立ち絵を募集している。
+    </p>
+  </div>
+
+  <div id="tab2" class="tab-content" hidden>
+    <h3>創作物まとめ</h3>
+    <p></p>
+  </div>
+
+  <div id="tab3" class="tab-content" hidden>
+    <h3>実績</h3>
+    <h4>プログラミング</h4>
+        <a href="https://app.hackthebox.com/public/users/4140516"
+            target="_blank"
+            rel="noopener noreferrer">
+        <img src="https://www.htbbadge.tech/api/badge?user=4140516" alt="HTB Badge"
+            width="450" style="max-width: 100%; height: auto;">
+        </a>
+  </div>
+
+  <div id="tab4" class="tab-content" hidden>
+    <h3>お問い合わせ</h3>
+    <p>Discordのみ開放しております。
+        <br>お問い合わせの際は<a href="https://discord.gg/8zfpHYDAuc">Discord</a>こちらから
+    </p>
+  </div>
+
+  <script>
+    function showTab(tabId, button) {
+      document.querySelectorAll('.tab-content').forEach(content => {
+        content.hidden = true;
+      });
+      document.getElementById(tabId).hidden = false;
+      document.querySelectorAll('.tab').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      button.classList.add('active');
+    }
+  </script>
+</body>
+
+<footer>
+    © 2026 alstiaYY
+</footer>
+
+</html>
