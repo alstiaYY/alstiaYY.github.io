@@ -5,94 +5,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>alstiaYYのホームページ！！</title>
-
-  <style>
-    body {
-      font-family: sans-serif, "MS PGothic", "ＭＳ Ｐゴシック";
-      margin: 30px;
-      color: #333;
-    }
-
-    .site-title {
-    font-size: 22px;
-    font-weight: bold;
-    white-space: nowrap;
-    }
-
-    .tabs {
-      display: flex;
-      gap: 10px;
-      border-bottom: 2px solid #ddd;
-      justify-content: flex-end;
-    }
-
-    .tab {
-      padding: 12px 24px;
-      border: none;
-      background: #eee;
-      cursor: pointer;
-      font-size: 16px;
-      border-radius: 6px 6px 0 0;
-    }
-
-    .tab.active {
-      background: #2563eb;
-      color: white;
-    }
-
-    .tab-content {
-      height: 600px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    padding: 20px;
-    box-sizing: border-box;
-    }
-
-    .tab-content[hidden] {
-      display: none;
-    }
-    footer {
-        padding: 15px;
-        text-align: center;
-        background: #2b2b2b;
-        color: #ffffff;
-        font-size: 12px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="tab.js" defer></script>
 </head>
 
 <body>
-
- <span class="site-title">alstiaYY *試作</span>
+  <div>
+    <p class="title">
+      alstiaYY
+    </p>
+    <div class="url_svg">
+      <a href="https://www.x.com" target="_blank" rel="noopener noreferrer">
+        <img src="images/x.svg">
+      </a>
+      <a href="https://www.youtube.com/@alstiaYY" target="_blank" rel="noopener noreferrer">
+        <img src="images/youtube.svg">
+      </a>
+      <a href="https://discord.gg/8zfpHYDAuc" target="_blank" rel="noopener noreferrer">
+        <img src="images/discord.svg">
+      </a>
+      <a href="" target="_blank" rel="noopener noreferrer">
+        <img src="images/steam.svg">
+      </a>
+      <a href="https://github.com/alstiaYY" target="_blank" rel="noopener noreferrer">
+        <img src="images/github.svg">
+      </a>
+    </div>
+  </div>
 
   <div class="tabs">
-
-    <button class="tab active"
-      onclick="showTab('tab1', this)">
-      概要
-    </button>
-
-    <button class="tab"
-      onclick="showTab('tab2', this)">
-      創作物
-    </button>
-
-    <button class="tab"
-      onclick="showTab('tab3', this)">
-      実績
-    </button>
-
-    <button class="tab"
-      onclick="showTab('tab4', this)">
-      お問い合わせ
-    </button>
+    <button class="tab active" onclick="showTab('tab1', this)">概要</button>
+    <button class="tab" onclick="showTab('tab2', this)">創作物</button>
+    <button class="tab" onclick="showTab('tab3', this)">実績</button>
+    <button class="tab" onclick="showTab('tab4', this)">お問い合わせ</button>
   </div>
 
   <div id="tab1" class="tab-content">
     <h1>◆ 「あるすてぃあ」について ◆</h1>
-    <p>自由に生きるためだけに作られた場所。
-        <br>たまに創作をする。
-    </p>
+    <p>自由に生きるためだけに作られた場所。<br>たまに創作をする。</p>
     <h2>メンバー</h2>
     <h3>紙箱</h3>
     <p>正式名称「alstia」。alstiaYYを運営している人間。
@@ -131,23 +81,10 @@
         <br>お問い合わせの際は<a href="https://discord.gg/8zfpHYDAuc">Discord</a>こちらから
     </p>
   </div>
-
-  <script>
-    function showTab(tabId, button) {
-      document.querySelectorAll('.tab-content').forEach(content => {
-        content.hidden = true;
-      });
-      document.getElementById(tabId).hidden = false;
-      document.querySelectorAll('.tab').forEach(tab => {
-        tab.classList.remove('active');
-      });
-      button.classList.add('active');
-    }
-  </script>
 </body>
 
 <footer>
-    © 2026 alstiaYY
+    © alstiaYY | ver1.2 最終更新日 2026/10/30
 </footer>
 
 </html>
